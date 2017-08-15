@@ -12,13 +12,20 @@ print('Finished making coffeee...')
 MY_COFFEE = 'Tasty Coffee'
 print("--Here's your {}, Enjoy!!-- Mr. {} \n".format(MY_COFFEE, 'Evans'))
 
+
 def prime_numbers(upper_limit_n):
     """
     Function to return prime numbers from 0 to n
     """
+
+    #upper_limit should always be a non prime_number
+    if upper_limit_n % 2 == 0: 
+        upper_limit_n += 1
+
     for i in range(0, upper_limit_n, 2):
         print(i)
     
+    ##Trying a different approach of getting prime numbers
     print(", ".join(""+str(i) for i in range(0, upper_limit_n, 2)))
 
     '''
@@ -63,5 +70,5 @@ def fibonacci_squence_exception():
     """
     print("Unsupported length of squence, total_number_of_values \n should b >= 3")
 
-prime_numbers(11)
+prime_numbers(30)
 fibonacci_squence(20, 15, 15)
